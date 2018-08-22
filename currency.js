@@ -7,10 +7,10 @@ console.log(to);
 
 function convert(){
   $.ajax({
-      url: 'http://www.apilayer.net/api/live?access_key=476a103e3541250b9aa2b704e0ac4185'+'&from='+from+'&to='+to+'&amount='+fromAmount,
+      url: 'http://www.apilayer.net/api/convert?access_key=476a103e3541250b9aa2b704e0ac4185'+'&from='+from+'&to='+to+'&amount='+fromAmount,
       dataType: 'jsonp',
       success: function(json) {
-        alert(json.result);
+        console.log(json.result);
       }
   });
 }
