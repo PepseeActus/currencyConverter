@@ -1,13 +1,16 @@
-var converter = CurrencyConverter({
-    API : {
-        url: 'http://apilayer.net/api/list',
-        queryParams: {
-            apiKey: '476a103e3541250b9aa2b704e0ac4185'
-        }
-    }
-});
+var fromAmount = $('#fromAmount').val();
+console.log(fromAmount);
+var from = $('#from').val();
+console.log(from);
+var to = $('#to').val();
+console.log(to);
 
-function loadCurrencies(){
-  var from = getElementById('from');
-  var to = getElementById('to');
+function convert(){
+  $.ajax({
+      url: 'http://www.apilayer.net/api/live?access_key=476a103e3541250b9aa2b704e0ac4185'+'&from='+from+'&to='+to+'&amount='+fromAmount,
+      dataType: 'jsonp',
+      success: function(json) {
+        alert(json.result);
+      }
+  });
 }
