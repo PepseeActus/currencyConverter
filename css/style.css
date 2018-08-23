@@ -1,0 +1,15 @@
+i {
+  font-size: 40px;
+    color: #d4d6d9;
+}
+
+i:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.input-group-text {
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+}

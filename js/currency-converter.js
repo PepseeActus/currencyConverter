@@ -11,8 +11,6 @@ function loadCurrencies(){
       }
       from.innerHTML = options;
       to.innerHTML = options;
-
-      $('select').formSelect();
     }
   }
   xhttp.open('GET', 'http://data.fixer.io/api/latest?access_key=bbaa60a02be8dc9a0739ac9e1dd37a3f', true);
